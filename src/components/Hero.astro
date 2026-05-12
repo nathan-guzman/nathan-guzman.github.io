@@ -1,0 +1,38 @@
+---
+// TODO: Replace /images/hero-placeholder.svg with the final historical map / collage
+---
+
+<section id="hero" class="relative min-h-[90vh] flex items-center overflow-hidden">
+  <!-- Background image -->
+  <div class="absolute inset-0 -z-10">
+    <img
+      src="/images/hero-placeholder.svg"
+      alt=""
+      aria-hidden="true"
+      class="w-full h-full object-cover"
+    />
+    <!-- Warm cream overlay for legibility -->
+    <div class="absolute inset-0 bg-cream/65"></div>
+  </div>
+
+  <div class="mx-auto max-w-6xl px-6 lg:px-10 py-32 sm:py-40">
+    <h1 class="font-serif text-5xl sm:text-7xl lg:text-8xl text-ink-deep leading-[1.05] tracking-tight">
+      Nathan Guzman
+    </h1>
+    <p class="mt-6 max-w-xl text-lg sm:text-xl text-ink-soft font-sans">
+      Building tools and telling stories about place, memory, and the people who live there.
+    </p>
+  </div>
+
+  <!-- Scroll cue -->
+  <a
+    href="#intro"
+    aria-label="Scroll to introduction"
+    class="absolute bottom-8 left-1/2 -translate-x-1/2 flex flex-col items-center gap-2 text-warmgray hover:text-sage-deep transition-colors"
+  >
+    <span class="font-mono text-xs uppercase tracking-widest">Scroll</span>
+    <svg width="16" height="24" viewBox="0 0 16 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true">
+      <path d="M8 2 V20 M2 14 L8 20 L14 14" stroke-linecap="round" stroke-linejoin="round"/>
+    </svg>
+  </a>
+</section>

@@ -1,0 +1,96 @@
+---
+interface ProjectTile {
+  slug: string;
+  title: string;
+  tagline: string;
+  image: string;
+  tags: string[];
+}
+
+const tiles: ProjectTile[] = [
+  {
+    slug: '1940neighbors',
+    title: '1940neighbors.nyc',
+    tagline: 'Mapping 1940 NYC Census records to the buildings where people actually lived.',
+    image: '/images/tile-1940neighbors.svg',
+    tags: ['GIS', 'Historical Research'],
+  },
+  {
+    slug: 'checkpoint',
+    title: 'CheckPoint',
+    tagline: 'A scavenger hunt platform that turned a Brooklyn farewell into a city-wide game.',
+    image: '/images/tile-checkpoint.svg',
+    tags: ['Civic Tech', 'Placemaking'],
+  },
+  {
+    slug: 'locale',
+    title: 'Locale',
+    tagline: 'Discover the businesses within walking distance of where you live.',
+    image: '/images/tile-locale.svg',
+    tags: ['Local-first', 'OpenStreetMap'],
+  },
+  {
+    slug: 'bird-tracker',
+    title: 'Backyard Bird Tracker',
+    tagline: 'A 3-tap workflow for contributing casual bird counts to eBird.',
+    image: '/images/tile-bird-tracker.svg',
+    tags: ['Citizen Science', 'PWA'],
+  },
+  {
+    slug: 'thesis',
+    title: 'Senior Thesis + Documentary',
+    tagline: 'Two years of ethnographic fieldwork on felonism, communicated through film.',
+    image: '/images/tile-thesis.svg',
+    tags: ['Ethnography', 'Documentary'],
+  },
+  {
+    slug: 'park-slope',
+    title: 'Park Slope Buildings',
+    tagline: 'A static map of Park Slope buildings by year of construction.',
+    image: '/images/tile-park-slope.svg',
+    tags: ['Cartography', 'NYC Open Data'],
+  },
+];
+---
+
+<section id="work" class="py-20 sm:py-28 border-t border-warmgray/15">
+  <div class="mx-auto max-w-6xl px-6 lg:px-10">
+    <header class="mb-12 flex items-baseline justify-between flex-wrap gap-4">
+      <h2 class="font-serif text-3xl sm:text-4xl text-ink-deep">Selected work</h2>
+      <p class="font-mono text-xs text-warmgray uppercase tracking-widest">Tap a tile to jump down</p>
+    </header>
+
+    <ul class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+      {tiles.map((tile) => (
+        <li>
+          <a
+            href={`#${tile.slug}`}
+            class="group block bg-cream-deep border border-warmgray/20 rounded-lg overflow-hidden transition-all duration-200 hover:-translate-y-1 hover:shadow-lg hover:border-sage/60"
+          >
+            <div class="aspect-[4/3] overflow-hidden bg-cream">
+              <img
+                src={tile.image}
+                alt={`${tile.title} preview`}
+                class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-[1.02]"
+                loading="lazy"
+              />
+            </div>
+            <div class="p-5">
+              <h3 class="font-serif text-xl text-ink-deep group-hover:text-sage-deep transition-colors">
+                {tile.title}
+              </h3>
+              <p class="mt-2 text-sm text-ink-soft leading-snug">{tile.tagline}</p>
+              <ul class="mt-3 flex flex-wrap gap-2">
+                {tile.tags.map((tag) => (
+                  <li class="font-mono text-[10px] uppercase tracking-wider text-sage-deep border border-sage/40 rounded-full px-2 py-0.5">
+                    {tag}
+                  </li>
+                ))}
+              </ul>
+            </div>
+          </a>
+        </li>
+      ))}
+    </ul>
+  </div>
+</section>

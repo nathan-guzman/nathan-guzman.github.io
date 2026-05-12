@@ -1,0 +1,57 @@
+---
+import { getCollection } from 'astro:content';
+import BaseLayout from '../layouts/BaseLayout.astro';
+import Hero from '../components/Hero.astro';
+import IntroParagraph from '../components/IntroParagraph.astro';
+import ProjectGrid from '../components/ProjectGrid.astro';
+import ProjectSection from '../components/ProjectSection.astro';
+import SideProjects from '../components/SideProjects.astro';
+import About from '../components/About.astro';
+import Contact from '../components/Contact.astro';
+
+const projects = (await getCollection('projects')).sort(
+  (a, b) => a.data.order - b.data.order
+);
+
+// Pre-render each project's body once
+const rendered = await Promise.all(
+  projects.map(async (entry) => {
+    const { Content } = await entry.render();
+    return { entry, Content };
+  })
+);
+---
+
+<BaseLayout>
+  <Hero />
+  <IntroParagraph />
+  <ProjectGrid />
+
+  {rendered.map(({ entry, Content }) => (
+    <ProjectSection
+      slug={entry.slug}
+      title={entry.data.title}
+      tagline={entry.data.tagline}
+      tools={entry.data.tools}
+      role={entry.data.role}
+      year={entry.data.year}
+      links={entry.data.links}
+      pullQuote={entry.data.pullQuote}
+      visualVariant={entry.data.visualVariant}
+      visualSrc={entry.data.visualSrc}
+      visualAlt={entry.data.visualAlt}
+      visualPoster={entry.data.visualPoster}
+      vimeoId={entry.data.vimeoId}
+      iframePermissions={entry.data.iframePermissions}
+      visualSide={entry.data.visualSide}
+      variantNote={entry.data.variantNote}
+      compact={entry.data.compact}
+    >
+      <Content />
+    </ProjectSection>
+  ))}
+
+  <SideProjects />
+  <About />
+  <Contact />
+</BaseLayout>

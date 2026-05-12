@@ -1,0 +1,82 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Font imports via @fontsource (loaded in BaseLayout) handle the @font-face rules */
+
+:root {
+  --color-cream: #FAF7F2;
+  --color-cream-deep: #F5F1E8;
+  --color-ink: #2A2A28;
+  --color-ink-deep: #1F1F1D;
+  --color-sage: #6B8E5A;
+  --color-sage-deep: #3D5A3D;
+  --color-terracotta: #B87E5A;
+  --color-tan: #C9A47E;
+  --color-warmgray: #8B8579;
+}
+
+html {
+  scroll-behavior: smooth;
+  background-color: var(--color-cream);
+  color: var(--color-ink);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+body {
+  font-family: 'Public Sans', system-ui, sans-serif;
+  font-size: 17px;
+  line-height: 1.65;
+  background-color: var(--color-cream);
+  color: var(--color-ink);
+}
+
+h1, h2, h3, h4 {
+  font-family: 'Fraunces', Georgia, serif;
+  color: var(--color-ink-deep);
+  font-weight: 500;
+  letter-spacing: -0.01em;
+}
+
+/* Account for sticky nav when jumping to anchors */
+section[id] {
+  scroll-margin-top: 80px;
+}
+
+/* Focus visibility */
+*:focus-visible {
+  outline: 2px solid var(--color-sage-deep);
+  outline-offset: 3px;
+  border-radius: 2px;
+}
+
+/* Selection */
+::selection {
+  background-color: var(--color-sage);
+  color: var(--color-cream);
+}
+
+/* Subtle paper texture (optional polish) — applied to body via utility */
+.paper-grain {
+  background-image: radial-gradient(rgba(139, 133, 121, 0.06) 1px, transparent 1px);
+  background-size: 3px 3px;
+}
+
+/* Prose styles for project body markdown */
+.prose-warm p {
+  margin-bottom: 1.1rem;
+  color: var(--color-ink);
+}
+.prose-warm p:last-child {
+  margin-bottom: 0;
+}
+.prose-warm a {
+  color: var(--color-sage-deep);
+  text-decoration: underline;
+  text-decoration-thickness: 1px;
+  text-underline-offset: 3px;
+}
+.prose-warm a:hover {
+  color: var(--color-terracotta);
+}

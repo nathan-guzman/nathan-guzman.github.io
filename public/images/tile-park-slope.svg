@@ -1,0 +1,57 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 600">
+  <rect width="800" height="600" fill="#F5F1E8"/>
+  <!-- Grid of building footprints colored by faux year -->
+  <g stroke="#1F1F1D" stroke-opacity="0.15" stroke-width="0.5">
+    <rect x="80" y="80" width="60" height="40" fill="#3D5A3D" fill-opacity="0.7"/>
+    <rect x="150" y="80" width="60" height="40" fill="#3D5A3D" fill-opacity="0.55"/>
+    <rect x="220" y="80" width="60" height="40" fill="#6B8E5A" fill-opacity="0.55"/>
+    <rect x="290" y="80" width="60" height="40" fill="#6B8E5A" fill-opacity="0.45"/>
+    <rect x="360" y="80" width="60" height="40" fill="#C9A47E" fill-opacity="0.55"/>
+    <rect x="430" y="80" width="60" height="40" fill="#B87E5A" fill-opacity="0.55"/>
+    <rect x="500" y="80" width="60" height="40" fill="#B87E5A" fill-opacity="0.7"/>
+
+    <rect x="80" y="140" width="60" height="40" fill="#3D5A3D" fill-opacity="0.5"/>
+    <rect x="150" y="140" width="60" height="40" fill="#6B8E5A" fill-opacity="0.6"/>
+    <rect x="220" y="140" width="60" height="40" fill="#6B8E5A" fill-opacity="0.45"/>
+    <rect x="290" y="140" width="60" height="40" fill="#C9A47E" fill-opacity="0.5"/>
+    <rect x="360" y="140" width="60" height="40" fill="#C9A47E" fill-opacity="0.7"/>
+    <rect x="430" y="140" width="60" height="40" fill="#B87E5A" fill-opacity="0.5"/>
+    <rect x="500" y="140" width="60" height="40" fill="#B87E5A" fill-opacity="0.6"/>
+
+    <rect x="80" y="200" width="60" height="40" fill="#6B8E5A" fill-opacity="0.5"/>
+    <rect x="150" y="200" width="60" height="40" fill="#6B8E5A" fill-opacity="0.7"/>
+    <rect x="220" y="200" width="60" height="40" fill="#C9A47E" fill-opacity="0.6"/>
+    <rect x="290" y="200" width="60" height="40" fill="#C9A47E" fill-opacity="0.5"/>
+    <rect x="360" y="200" width="60" height="40" fill="#B87E5A" fill-opacity="0.45"/>
+    <rect x="430" y="200" width="60" height="40" fill="#B87E5A" fill-opacity="0.6"/>
+    <rect x="500" y="200" width="60" height="40" fill="#3D5A3D" fill-opacity="0.55"/>
+
+    <rect x="80" y="260" width="60" height="40" fill="#C9A47E" fill-opacity="0.5"/>
+    <rect x="150" y="260" width="60" height="40" fill="#C9A47E" fill-opacity="0.7"/>
+    <rect x="220" y="260" width="60" height="40" fill="#B87E5A" fill-opacity="0.6"/>
+    <rect x="290" y="260" width="60" height="40" fill="#B87E5A" fill-opacity="0.5"/>
+    <rect x="360" y="260" width="60" height="40" fill="#3D5A3D" fill-opacity="0.45"/>
+    <rect x="430" y="260" width="60" height="40" fill="#3D5A3D" fill-opacity="0.6"/>
+    <rect x="500" y="260" width="60" height="40" fill="#6B8E5A" fill-opacity="0.55"/>
+
+    <rect x="80" y="320" width="60" height="40" fill="#B87E5A" fill-opacity="0.55"/>
+    <rect x="150" y="320" width="60" height="40" fill="#B87E5A" fill-opacity="0.7"/>
+    <rect x="220" y="320" width="60" height="40" fill="#3D5A3D" fill-opacity="0.5"/>
+    <rect x="290" y="320" width="60" height="40" fill="#3D5A3D" fill-opacity="0.65"/>
+    <rect x="360" y="320" width="60" height="40" fill="#6B8E5A" fill-opacity="0.55"/>
+    <rect x="430" y="320" width="60" height="40" fill="#6B8E5A" fill-opacity="0.7"/>
+    <rect x="500" y="320" width="60" height="40" fill="#C9A47E" fill-opacity="0.6"/>
+  </g>
+  <!-- Legend -->
+  <g font-family="Georgia, serif" font-size="12" fill="#2A2A28">
+    <rect x="600" y="100" width="16" height="16" fill="#3D5A3D" fill-opacity="0.7"/>
+    <text x="624" y="113">pre-1900</text>
+    <rect x="600" y="130" width="16" height="16" fill="#6B8E5A" fill-opacity="0.6"/>
+    <text x="624" y="143">1900–1940</text>
+    <rect x="600" y="160" width="16" height="16" fill="#C9A47E" fill-opacity="0.6"/>
+    <text x="624" y="173">1940–1980</text>
+    <rect x="600" y="190" width="16" height="16" fill="#B87E5A" fill-opacity="0.6"/>
+    <text x="624" y="203">post-1980</text>
+  </g>
+  <text x="400" y="560" text-anchor="middle" font-family="Georgia, serif" font-size="14" fill="#8B8579" font-style="italic">Park Slope Buildings — tile placeholder</text>
+</svg>

@@ -1,0 +1,56 @@
+---
+interface SideProject {
+  name: string;
+  description: string;
+  stack: string;
+  url: string;
+}
+
+const items: SideProject[] = [
+  {
+    name: 'Transaction Reconciliation App',
+    description: 'A two-person household expense reconciliation tool built on top of Google Sheets.',
+    stack: 'Next.js · Google Sheets API · Vercel',
+    url: '#',
+  },
+  {
+    name: 'Timeless Timer',
+    description: 'A minimalist PWA that hides the countdown. Built to reduce timer anxiety.',
+    stack: 'Vanilla JS · Cloudflare Workers · Durable Objects',
+    url: '#',
+  },
+];
+---
+
+<section id="side-projects" class="py-20 sm:py-28 border-t border-warmgray/15">
+  <div class="mx-auto max-w-6xl px-6 lg:px-10">
+    <h2 class="font-serif text-3xl sm:text-4xl text-ink-deep">Side projects</h2>
+    <p class="mt-2 font-mono text-xs text-warmgray uppercase tracking-widest">Smaller things, still useful</p>
+
+    <ul class="mt-10 divide-y divide-warmgray/20 border-y border-warmgray/20">
+      {items.map((item) => (
+        <li class="py-6 grid grid-cols-1 sm:grid-cols-12 gap-4 items-start">
+          <div class="sm:col-span-4">
+            <h3 class="font-serif text-xl text-ink-deep">{item.name}</h3>
+          </div>
+          <div class="sm:col-span-5 text-ink-soft">
+            <p>{item.description}</p>
+          </div>
+          <div class="sm:col-span-2 font-mono text-xs text-warmgray">
+            {item.stack}
+          </div>
+          <div class="sm:col-span-1 sm:text-right">
+            <a
+              href={item.url}
+              target="_blank"
+              rel="noopener noreferrer"
+              class="font-mono text-xs text-sage-deep hover:text-terracotta"
+            >
+              GitHub →
+            </a>
+          </div>
+        </li>
+      ))}
+    </ul>
+  </div>
+</section>

@@ -1,0 +1,146 @@
+---
+import PhoneFrame from './PhoneFrame.astro';
+import WideEmbed from './WideEmbed.astro';
+import VimeoEmbed from './VimeoEmbed.astro';
+
+interface ProjectLink {
+  label: string;
+  url: string;
+}
+
+interface Props {
+  slug: string;
+  title: string;
+  tagline: string;
+  tools: string[];
+  role: string;
+  year: string;
+  links?: ProjectLink[];
+  pullQuote?: string;
+  visualVariant: 'phone-iframe' | 'phone-video' | 'wide-iframe' | 'vimeo' | 'static-image';
+  visualSrc: string;
+  visualAlt?: string;
+  visualPoster?: string;
+  vimeoId?: string;
+  iframePermissions?: string;
+  visualSide?: 'left' | 'right';
+  variantNote?: string;
+  compact?: boolean;
+}
+
+const {
+  slug,
+  title,
+  tagline,
+  tools,
+  role,
+  year,
+  links = [],
+  pullQuote,
+  visualVariant,
+  visualSrc,
+  visualAlt,
+  visualPoster,
+  vimeoId,
+  iframePermissions = '',
+  visualSide = 'left',
+  variantNote,
+  compact = false,
+} = Astro.props;
+
+const verticalPad = compact ? 'py-16 sm:py-20' : 'py-20 sm:py-28';
+---
+
+<section id={slug} class={`${verticalPad} border-t border-warmgray/15`}>
+  <div class="mx-auto max-w-6xl px-6 lg:px-10">
+    <div class={`grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16 items-center`}>
+      <!-- Visual column -->
+      <div class={`${visualSide === 'right' ? 'lg:order-2 lg:col-span-5' : 'lg:order-1 lg:col-span-5'} flex justify-center`}>
+        {visualVariant === 'phone-iframe' && (
+          <PhoneFrame variant="iframe" src={visualSrc} title={title} allow={iframePermissions} />
+        )}
+        {visualVariant === 'phone-video' && (
+          <PhoneFrame variant="video" src={visualSrc} title={title} poster={visualPoster} />
+        )}
+        {visualVariant === 'wide-iframe' && (
+          <WideEmbed src={visualSrc} title={title} allow={iframePermissions} />
+        )}
+        {visualVariant === 'vimeo' && vimeoId && (
+          <VimeoEmbed vimeoId={vimeoId} title={title} />
+        )}
+        {visualVariant === 'static-image' && (
+          <figure class="w-full">
+            <img
+              src={visualSrc}
+              alt={visualAlt ?? title}
+              loading="lazy"
+              class="w-full h-auto rounded-lg border border-warmgray/25 shadow-md bg-cream-deep"
+            />
+          </figure>
+        )}
+        {variantNote && (
+          <p class="sr-only">{variantNote}</p>
+        )}
+      </div>
+
+      <!-- Narrative column -->
+      <div class={`${visualSide === 'right' ? 'lg:order-1 lg:col-span-7' : 'lg:order-2 lg:col-span-7'}`}>
+        <h2 class="font-serif text-3xl sm:text-4xl lg:text-5xl text-ink-deep leading-tight">
+          {title}
+        </h2>
+        <p class="mt-3 font-serif text-lg sm:text-xl text-sage-deep italic">
+          {tagline}
+        </p>
+
+        <!-- Metadata row -->
+        <dl class="mt-6 grid grid-cols-1 sm:grid-cols-3 gap-x-6 gap-y-3 font-mono text-xs text-ink-soft border-y border-warmgray/20 py-4">
+          <div>
+            <dt class="uppercase tracking-wider text-warmgray text-[10px]">Tools</dt>
+            <dd class="mt-1">{tools.join(' · ')}</dd>
+          </div>
+          <div>
+            <dt class="uppercase tracking-wider text-warmgray text-[10px]">Role</dt>
+            <dd class="mt-1">{role}</dd>
+          </div>
+          <div>
+            <dt class="uppercase tracking-wider text-warmgray text-[10px]">Year</dt>
+            <dd class="mt-1">{year}</dd>
+          </div>
+        </dl>
+
+        <!-- Body -->
+        <div class="mt-6 prose-warm font-sans text-base sm:text-[17px] leading-relaxed">
+          <slot />
+        </div>
+
+        {pullQuote && (
+          <blockquote class="my-8 border-l-4 border-sage pl-5 py-2 font-serif text-xl sm:text-2xl text-ink-deep italic leading-snug">
+            "{pullQuote}"
+          </blockquote>
+        )}
+
+        {variantNote && (
+          <p class="mt-4 font-mono text-xs text-warmgray italic">{variantNote}</p>
+        )}
+
+        {links.length > 0 && (
+          <ul class="mt-6 flex flex-wrap gap-3 font-mono text-xs">
+            {links.map((link) => (
+              <li>
+                <a
+                  href={link.url}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  class="inline-flex items-center gap-1.5 px-3 py-1.5 border border-sage/50 text-sage-deep rounded-full hover:bg-sage/10 transition-colors"
+                >
+                  {link.label}
+                  <span aria-hidden="true">→</span>
+                </a>
+              </li>
+            ))}
+          </ul>
+        )}
+      </div>
+    </div>
+  </div>
+</section>

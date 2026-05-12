@@ -1,0 +1,19 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 600">
+  <rect width="800" height="600" fill="#F5F1E8"/>
+  <!-- Pin route -->
+  <path d="M 100 480 Q 240 200 400 320 T 700 140" fill="none" stroke="#3D5A3D" stroke-width="3" stroke-dasharray="6 6"/>
+  <!-- Map pins -->
+  <g>
+    <circle cx="100" cy="480" r="14" fill="#B87E5A"/>
+    <circle cx="100" cy="480" r="5" fill="#F5F1E8"/>
+    <circle cx="280" cy="280" r="14" fill="#6B8E5A"/>
+    <circle cx="280" cy="280" r="5" fill="#F5F1E8"/>
+    <circle cx="460" cy="340" r="14" fill="#6B8E5A"/>
+    <circle cx="460" cy="340" r="5" fill="#F5F1E8"/>
+    <circle cx="620" cy="200" r="14" fill="#6B8E5A"/>
+    <circle cx="620" cy="200" r="5" fill="#F5F1E8"/>
+    <circle cx="700" cy="140" r="16" fill="#3D5A3D"/>
+    <text x="700" y="146" text-anchor="middle" font-family="Georgia, serif" font-size="14" fill="#F5F1E8">★</text>
+  </g>
+  <text x="400" y="560" text-anchor="middle" font-family="Georgia, serif" font-size="14" fill="#8B8579" font-style="italic">CheckPoint — tile placeholder</text>
+</svg>

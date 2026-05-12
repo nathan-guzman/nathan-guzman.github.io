@@ -1,0 +1,24 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 600">
+  <rect width="800" height="600" fill="#F5F1E8"/>
+  <!-- Concentric walking rings -->
+  <g fill="none" stroke="#6B8E5A" stroke-width="1.5">
+    <circle cx="400" cy="300" r="80" stroke-opacity="0.7"/>
+    <circle cx="400" cy="300" r="150" stroke-opacity="0.5"/>
+    <circle cx="400" cy="300" r="220" stroke-opacity="0.3"/>
+  </g>
+  <!-- Center pin -->
+  <circle cx="400" cy="300" r="10" fill="#3D5A3D"/>
+  <!-- Business markers -->
+  <g fill="#B87E5A">
+    <rect x="340" y="240" width="14" height="14"/>
+    <rect x="460" y="260" width="14" height="14"/>
+    <rect x="280" y="320" width="14" height="14"/>
+    <rect x="500" y="340" width="14" height="14"/>
+    <rect x="360" y="400" width="14" height="14"/>
+    <rect x="260" y="200" width="14" height="14"/>
+    <rect x="540" y="180" width="14" height="14"/>
+    <rect x="200" y="380" width="14" height="14"/>
+    <rect x="580" y="420" width="14" height="14"/>
+  </g>
+  <text x="400" y="560" text-anchor="middle" font-family="Georgia, serif" font-size="14" fill="#8B8579" font-style="italic">Locale — tile placeholder</text>
+</svg>

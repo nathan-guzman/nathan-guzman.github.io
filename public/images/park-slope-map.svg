@@ -1,0 +1,48 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 800">
+  <!-- TODO: Replace with high-resolution Park Slope building-age map -->
+  <rect width="1200" height="800" fill="#F5F1E8"/>
+  <g stroke="#1F1F1D" stroke-opacity="0.12" stroke-width="0.5">
+    <!-- Generate a denser grid of building footprints -->
+    <g id="row">
+      <rect x="60"  y="100" width="58" height="38" fill="#3D5A3D" fill-opacity="0.7"/>
+      <rect x="124" y="100" width="58" height="38" fill="#3D5A3D" fill-opacity="0.55"/>
+      <rect x="188" y="100" width="58" height="38" fill="#6B8E5A" fill-opacity="0.55"/>
+      <rect x="252" y="100" width="58" height="38" fill="#6B8E5A" fill-opacity="0.45"/>
+      <rect x="316" y="100" width="58" height="38" fill="#C9A47E" fill-opacity="0.55"/>
+      <rect x="380" y="100" width="58" height="38" fill="#B87E5A" fill-opacity="0.55"/>
+      <rect x="444" y="100" width="58" height="38" fill="#B87E5A" fill-opacity="0.7"/>
+      <rect x="508" y="100" width="58" height="38" fill="#3D5A3D" fill-opacity="0.6"/>
+      <rect x="572" y="100" width="58" height="38" fill="#6B8E5A" fill-opacity="0.5"/>
+      <rect x="636" y="100" width="58" height="38" fill="#C9A47E" fill-opacity="0.6"/>
+      <rect x="700" y="100" width="58" height="38" fill="#B87E5A" fill-opacity="0.55"/>
+      <rect x="764" y="100" width="58" height="38" fill="#3D5A3D" fill-opacity="0.6"/>
+      <rect x="828" y="100" width="58" height="38" fill="#6B8E5A" fill-opacity="0.55"/>
+      <rect x="892" y="100" width="58" height="38" fill="#C9A47E" fill-opacity="0.55"/>
+      <rect x="956" y="100" width="58" height="38" fill="#B87E5A" fill-opacity="0.65"/>
+      <rect x="1020" y="100" width="58" height="38" fill="#3D5A3D" fill-opacity="0.55"/>
+    </g>
+    <use href="#row" y="60"/>
+    <use href="#row" y="120"/>
+    <use href="#row" y="180"/>
+    <use href="#row" y="240"/>
+    <use href="#row" y="300"/>
+    <use href="#row" y="360"/>
+    <use href="#row" y="420"/>
+    <use href="#row" y="480"/>
+    <use href="#row" y="540"/>
+  </g>
+  <!-- Legend box -->
+  <g font-family="Georgia, serif" font-size="14" fill="#2A2A28">
+    <rect x="60" y="700" width="600" height="80" fill="#FAF7F2" stroke="#8B8579" stroke-opacity="0.4"/>
+    <text x="80" y="725" font-style="italic" fill="#8B8579">Year of construction (placeholder legend)</text>
+    <rect x="80" y="740" width="16" height="16" fill="#3D5A3D" fill-opacity="0.7"/>
+    <text x="104" y="753">pre-1900</text>
+    <rect x="220" y="740" width="16" height="16" fill="#6B8E5A" fill-opacity="0.6"/>
+    <text x="244" y="753">1900–1940</text>
+    <rect x="380" y="740" width="16" height="16" fill="#C9A47E" fill-opacity="0.6"/>
+    <text x="404" y="753">1940–1980</text>
+    <rect x="520" y="740" width="16" height="16" fill="#B87E5A" fill-opacity="0.6"/>
+    <text x="544" y="753">post-1980</text>
+  </g>
+  <text x="600" y="60" text-anchor="middle" font-family="Georgia, serif" font-size="22" fill="#1F1F1D">Park Slope — Building Construction Year</text>
+</svg>

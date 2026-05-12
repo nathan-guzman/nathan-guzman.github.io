@@ -1,0 +1,41 @@
+---
+// Sticky nav with blur backdrop after scroll past hero
+---
+
+<nav id="site-nav" class="fixed top-0 inset-x-0 z-50 transition-all duration-300">
+  <div class="mx-auto max-w-6xl px-6 lg:px-10 py-4 flex items-center justify-between">
+    <a href="#hero" class="font-serif text-lg sm:text-xl text-ink-deep hover:text-sage-deep transition-colors">
+      Nathan Guzman
+    </a>
+
+    <!-- Desktop links -->
+    <ul class="hidden sm:flex items-center gap-7 font-mono text-sm">
+      <li><a href="#work" class="hover:text-sage-deep transition-colors">Work</a></li>
+      <li><a href="#about" class="hover:text-sage-deep transition-colors">About</a></li>
+      <li><a href="#contact" class="hover:text-sage-deep transition-colors">Contact</a></li>
+    </ul>
+
+    <!-- Mobile: compact links (no JS hamburger needed at this scale) -->
+    <ul class="flex sm:hidden items-center gap-4 font-mono text-xs">
+      <li><a href="#work" class="hover:text-sage-deep">Work</a></li>
+      <li><a href="#about" class="hover:text-sage-deep">About</a></li>
+      <li><a href="#contact" class="hover:text-sage-deep">Contact</a></li>
+    </ul>
+  </div>
+</nav>
+
+<script is:inline>
+  (function () {
+    const nav = document.getElementById('site-nav');
+    if (!nav) return;
+    const onScroll = () => {
+      if (window.scrollY > 60) {
+        nav.classList.add('bg-cream/80', 'backdrop-blur-md', 'border-b', 'border-warmgray/20', 'shadow-sm');
+      } else {
+        nav.classList.remove('bg-cream/80', 'backdrop-blur-md', 'border-b', 'border-warmgray/20', 'shadow-sm');
+      }
+    };
+    onScroll();
+    window.addEventListener('scroll', onScroll, { passive: true });
+  })();
+</script>

@@ -1,0 +1,19 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 600">
+  <rect width="800" height="600" fill="#F5F1E8"/>
+  <g stroke="#3D5A3D" stroke-opacity="0.5" fill="none" stroke-width="1.5">
+    <path d="M 0 150 Q 200 130 400 160 T 800 180"/>
+    <path d="M 0 310 Q 250 290 500 320 T 800 340"/>
+    <path d="M 0 470 Q 200 450 400 480 T 800 500"/>
+    <path d="M 150 0 Q 170 200 130 400 T 170 600"/>
+    <path d="M 480 0 Q 500 200 460 400 T 500 600"/>
+  </g>
+  <g fill="#B87E5A" fill-opacity="0.35" stroke="#B87E5A" stroke-width="1">
+    <rect x="180" y="180" width="60" height="40"/>
+    <rect x="260" y="200" width="50" height="35"/>
+    <rect x="340" y="180" width="70" height="50"/>
+    <rect x="520" y="340" width="60" height="40"/>
+    <rect x="600" y="350" width="50" height="35"/>
+    <rect x="680" y="340" width="70" height="50"/>
+  </g>
+  <text x="400" y="560" text-anchor="middle" font-family="Georgia, serif" font-size="14" fill="#8B8579" font-style="italic">1940neighbors — tile placeholder</text>
+</svg>

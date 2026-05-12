@@ -1,0 +1,34 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 600">
+  <rect width="800" height="600" fill="#2A2A28"/>
+  <!-- Film strip frames -->
+  <g fill="#1F1F1D" stroke="#8B8579" stroke-opacity="0.4">
+    <rect x="120" y="180" width="160" height="120"/>
+    <rect x="320" y="180" width="160" height="120"/>
+    <rect x="520" y="180" width="160" height="120"/>
+  </g>
+  <!-- Sprocket holes -->
+  <g fill="#F5F1E8">
+    <rect x="140" y="150" width="20" height="14"/>
+    <rect x="200" y="150" width="20" height="14"/>
+    <rect x="260" y="150" width="20" height="14"/>
+    <rect x="340" y="150" width="20" height="14"/>
+    <rect x="400" y="150" width="20" height="14"/>
+    <rect x="460" y="150" width="20" height="14"/>
+    <rect x="540" y="150" width="20" height="14"/>
+    <rect x="600" y="150" width="20" height="14"/>
+    <rect x="660" y="150" width="20" height="14"/>
+    <rect x="140" y="316" width="20" height="14"/>
+    <rect x="200" y="316" width="20" height="14"/>
+    <rect x="260" y="316" width="20" height="14"/>
+    <rect x="340" y="316" width="20" height="14"/>
+    <rect x="400" y="316" width="20" height="14"/>
+    <rect x="460" y="316" width="20" height="14"/>
+    <rect x="540" y="316" width="20" height="14"/>
+    <rect x="600" y="316" width="20" height="14"/>
+    <rect x="660" y="316" width="20" height="14"/>
+  </g>
+  <!-- Play triangle -->
+  <polygon points="380,220 380,280 430,250" fill="#B87E5A"/>
+  <text x="400" y="430" text-anchor="middle" font-family="Georgia, serif" font-size="18" fill="#C9A47E" font-style="italic">America: Home of the Second Chance?</text>
+  <text x="400" y="560" text-anchor="middle" font-family="Georgia, serif" font-size="14" fill="#8B8579" font-style="italic">Senior Thesis + Documentary — tile placeholder</text>
+</svg>
