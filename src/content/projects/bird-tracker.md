@@ -20,4 +20,4 @@ eBird is the gold standard for global bird observation data, used by researchers
 
 Backyard Bird Tracker reduces the session to tap-to-count. The species grid is ranked by how likely each bird is to appear in your region right now, based on eBird's regional frequency data. You tap a card to count, tap again to count more. When you're done, you export a CSV formatted exactly to eBird's import specification, and your casual count joins the global dataset.
 
-The app is offline-capable, installable as a PWA, and uses GPS auto-detection to localize the species list. It's a small accessibility project — narrowing the gap between citizen-science infrastructure and the people who could be contributing to it but currently aren't.
+The app is offline-capable, installable as a PWA, and uses GPS auto-detection to localize the species list. It's a small piece of community-data infrastructure — narrowing the gap between citizen-science systems and the people who could be contributing to them but currently aren't. The same instinct that drives the planning work: lower the friction between formal data systems and the everyday people whose observations actually populate them.

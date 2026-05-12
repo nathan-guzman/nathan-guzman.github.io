@@ -19,6 +19,6 @@ links:
 
 Locale pulls every business within a configurable walking radius of your address, sourced from OpenStreetMap. You can set a home address, browse what's around you, and track which places you've visited. It's local-first — your data lives on your device, not on a server.
 
-I built it because I wanted a tool that pushed against algorithmic discovery — no recommendations, no rankings, no "for you" feed. Just the actual map of what's nearby, organized by category and walking distance, encouraging you to explore the businesses in your immediate neighborhood rather than the ones an algorithm thinks you'd like.
+I built it because I wanted a tool that pushed against algorithmic discovery — no recommendations, no rankings, no "for you" feed. Just the actual map of what's nearby, organized by category and walking distance, encouraging people to spend time and money in the businesses on their own block rather than the ones an algorithm surfaces.
 
-It's a small piece of civic technology in the quietest sense: a tool that makes the geography around you legible without intermediating it.
+It's a small piece of civic technology in the quietest sense: a walkability tool that makes the local economy legible without intermediating it. The same condition that makes a neighborhood feel alive — that you can get most of what you need on foot — is what Locale tries to put in front of people, one address at a time.

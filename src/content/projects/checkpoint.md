@@ -24,4 +24,4 @@ The technical depth came from designing for real-world conditions. GPS is unreli
 
 After the game ends, players can export every discovered place as a KML file to save in Google My Maps. A scavenger hunt that happened on one afternoon becomes a permanent layer on their personal map of a place.
 
-A planned "lifestyle" version is in the works — the gamification recedes and people can share meaningful places with friends without the competition.
+The reason I keep building on it is the underlying premise: most of the third places and community-serving spaces that make a neighborhood feel like one don't show up in the algorithmic stack, and they're the first things to go when they're not noticed. CheckPoint is a small, playful way to put them back on people's mental maps. A planned "lifestyle" version is in the works, where the gamification recedes and people can simply share meaningful places with friends.
